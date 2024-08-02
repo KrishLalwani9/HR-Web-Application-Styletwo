@@ -5,8 +5,8 @@
 <head>
 <meta charset='utf-8'>
 <title>HR Application</title>
-<script src='/styletwo/js/DesignationEditForm.js'></script>
-<link rel='stylesheet' type='text/css' href='/styletwo/css/styles.css'>
+<script src='/styletwo/js/ConfirmDeleteDesignation.js'></script>
+<link rel='stylesheet' type='text/css' href='/styletwo/css/styles.css' />
 </head>
 <body>
 <!-- Main Continer starts here -->
@@ -25,15 +25,16 @@
 </div> <!-- left panel ends here -->
 <!-- right panel starts here -->
 <div class='content-right-panel'>
-<h2>Designation (Edit Module)</h2>
+<h2>Designation (Delete Module)</h2>
 <span class='error'><jsp:getProperty name='errorBean' property='error' /></span> <!-- Or we can use regular expression as ${errorBean.error} -->
-<form method='post' action='/styletwo/EditDesignation.jsp' onsubmit='return validateForm(this)'>
-Designation
+<form method='post' action='/styletwo/DeleteDesignation.jsp' onsubmit='return validateForm(this)'>
+Designation :&nbsp;&nbsp;
 <input type='hidden' id='code' name='code' value='${designationBean.code}'>
-<input type='text' id='title' name='title' maxlength='35' size='36' value='${designationBean.title}'> <!-- We also can write <%=designationBean.getTitle()%> -->
+<b>${designationBean.title}</b><br><br> <!-- We also can write <%=designationBean.getTitle()%> -->
+Are you sure, you want to delete ?
 <span id='titleErrorSection' class='error'></span><br> 
-<button type='submit'>Update</button> 
-<button type='button' onclick='cancelEdition()'>Cancel</button>
+<button type='submit'>Yes</button> 
+<button type='button' onclick='cancelDeletion()'>No</button>
 </form> 
 </div> <!-- right panel ends here -->
 </div> <!-- conten-section ends here -->
@@ -42,7 +43,7 @@ Designation
 &copy; Krish Lalwani 2050
 </div> <!-- footer ends here -->
 </div> <!-- Main Continer ends here -->
-<form id='cancelEditionForm' action='/styletwo/Designations.jsp'>
+<form id='cancelDeletionForm' action='/styletwo/Designations.jsp'>
 </form>
 </body>
 </html>
