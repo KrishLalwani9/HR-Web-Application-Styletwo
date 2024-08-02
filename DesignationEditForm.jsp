@@ -1,11 +1,11 @@
 <jsp:useBean id='designationBean' scope='request' class='com.krish.lalwani.hr.beans.DesignationBean' />
-<jsp:useBean id='errorBean' scope='request' class='com.krish.lalwani.hr.beans.ErrorBean' />
+<jsp:useBean id='errorBean' scope='request' class='com.krish.lalwani.hr.beans.ErrorBean' /> 
 <!DOCTYPE HTML>
 <html lang='en'>
 <head>
 <meta charset='utf-8'>
 <title>HR Application</title>
-<script src='/styletwo/js/DesignationAddForm.js'></script>
+<script src='/styletwo/js/DesignationEditForm.js'></script>
 <link rel='stylesheet' type='text/css' href='/styletwo/css/styles.css'>
 </head>
 <body>
@@ -25,14 +25,15 @@
 </div> <!-- left panel ends here -->
 <!-- right panel starts here -->
 <div class='content-right-panel'>
-<h2>Designation (Add Module)</h2>
+<h2>Designation (Edit Module)</h2>
 <span class='error'><jsp:getProperty name='errorBean' property='error' /></span> <!-- Or we can use regular expression as ${errorBean.error} -->
-<form method='post' action='/styletwo/AddDesignation.jsp' onsubmit='return validateForm(this)'>
+<form method='post' action='/styletwo/EditDesignation.jsp' onsubmit='return validateForm(this)'>
 Designation
+<input type='hidden' id='code' name='code' value=${designationBean.code}>
 <input type='text' id='title' name='title' maxlength='35' size='36' value=${designationBean.title}> <!-- We also can write <%=designationBean.getTitle()%> -->
 <span id='titleErrorSection' class='error'></span><br> 
-<button type='submit'>Add</button> 
-<button type='button' onclick='cancelAddition()'>Cancel</button>
+<button type='submit'>Update</button> 
+<button type='button' onclick='cancelEdition()'>Cancel</button>
 </form> 
 </div> <!-- right panel ends here -->
 </div> <!-- conten-section ends here -->
@@ -41,7 +42,7 @@ Designation
 &copy; Krish Lalwani 2050
 </div> <!-- footer ends here -->
 </div> <!-- Main Continer ends here -->
-<form id='cencelAdditionForm' action='/styletwo/Designations.jsp'>
+<form id='cancelEditionForm' action='/styletwo/Designations.jsp'>
 </form>
 </body>
 </html>

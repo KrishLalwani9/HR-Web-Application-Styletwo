@@ -20,7 +20,7 @@ try
 designationDAO.addDesignation(designation);
 designationBean.setCode(designation.getCode());
 MessageBean messageBean=new MessageBean();
-messageBean.setHeading("Designatio (Add Module)");
+messageBean.setHeading("Designation (Add Module)");
 messageBean.setMessage("Designation Added, Add More ?");
 messageBean.setGenerateButtons(true);
 messageBean.setGenerateTwoButtons(true);
