@@ -43,4 +43,13 @@
     </attribute>
   
      </tag>
+
+     <tag>
+    <name>Designations</name>
+    <tag-class>com.krish.lalwani.hr.tags.DesignationsTagHandler</tag-class>
+    <description>
+	To setup designations record
+    </description>
+     </tag>
+
 </taglib>

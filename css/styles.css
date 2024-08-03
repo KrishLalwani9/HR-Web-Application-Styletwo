@@ -49,6 +49,7 @@ margin-bottom:5px;
 margin-left:105px;
 margin-right:5px;
 padding:5px;
+overflow:scroll;
 border:1px solid black;
 }
 .footer
@@ -58,4 +59,9 @@ height:auto;
 margin:5px;
 text-align:center;
 border:1px solid white;
+}
+.table-heading
+{
+text-align:right;
+padding:5px;
 }

@@ -22,7 +22,7 @@ messageBean.setMessage("Designation Deleted");
 messageBean.setGenerateButtons(true);
 messageBean.setGenerateTwoButtons(false);
 messageBean.setButtonOneText("Ok");
-messageBean.setButtonOneAction("Designation.jsp");
+messageBean.setButtonOneAction("Designations.jsp");
 request.setAttribute("messageBean",messageBean);
 RequestDispatcher requestDispatcher=request.getRequestDispatcher("/Notification.jsp");
 requestDispatcher.forward(request,response);
