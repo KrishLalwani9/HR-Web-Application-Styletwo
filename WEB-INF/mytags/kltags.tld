@@ -44,6 +44,21 @@
   
      </tag>
 
+    <tag>
+    <name>Module</name>
+    <tag-class>com.krish.lalwani.hr.tags.ModuleTagHandler</tag-class>
+    <description>
+	To Define the module
+    </description>
+
+    <attribute>
+      <name>name</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>		
+    </attribute>
+  
+     </tag>
+
      <tag>
     <name>Designations</name>
     <tag-class>com.krish.lalwani.hr.tags.DesignationsTagHandler</tag-class>

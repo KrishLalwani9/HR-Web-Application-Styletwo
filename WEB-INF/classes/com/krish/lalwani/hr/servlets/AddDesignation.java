@@ -53,4 +53,8 @@ requestDispatcher.forward(request,response);
 }
 }
 }
+public void doGet(HttpServletRequest request,HttpServletResponse response)
+{
+doPost(request,response);
+}
 }
