@@ -67,4 +67,21 @@
     </description>
      </tag>
 
+     <tag>
+    <name>FormResubmitted</name>
+    <tag-class>com.krish.lalwani.hr.tags.FormResubmittedTagHandler</tag-class>
+    <description>
+	To notify if form is resubmitted
+    </description>
+     </tag>
+
+     <tag>
+    <name>FormId</name>
+    <tag-class>com.krish.lalwani.hr.tags.FormIdTagHandler</tag-class>
+    <description>
+	To generating form identity
+    </description>
+     </tag>
+
+
 </taglib>

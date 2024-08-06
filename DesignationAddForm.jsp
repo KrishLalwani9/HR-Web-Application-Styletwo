@@ -8,6 +8,7 @@
 <span class='error'><jsp:getProperty name='errorBean' property='error' /></span> <!-- Or we can use regular expression as ${errorBean.error} -->
 <form method='post' action='/styletwo/AddDesignation.jsp' onsubmit='return validateForm(this)'>
 Designation
+<kl:FormId /> <!-- for generating uuid and keept into session scope -->
 <input type='text' id='title' name='title' maxlength='35' size='36' value=${designationBean.title}> <!-- We also can write <%=designationBean.getTitle()%> -->
 <span id='titleErrorSection' class='error'></span><br> 
 <button type='submit'>Add</button> 

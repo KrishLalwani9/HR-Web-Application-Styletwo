@@ -75,4 +75,14 @@
 <url-pattern>/deleteDesignation</url-pattern>
 </servlet-mapping>
 
+<servlet>
+<servlet-name>NotifyFormResubmission</servlet-name>
+<servlet-class>com.krish.lalwani.hr.servlets.NotifyFormResubmission</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>NotifyFormResubmission</servlet-name>
+<url-pattern>/notifyFormResubmission</url-pattern>
+</servlet-mapping>
+
+
 </web-app>
