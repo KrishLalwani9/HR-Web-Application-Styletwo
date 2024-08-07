@@ -1,4 +1,7 @@
 <%@taglib uri='/WEB-INF/mytags/kltags.tld' prefix='kl' %>
+<kl:If condition='${username==null}'>
+<jsp:forward page='/LoginForm.jsp' />
+</kl:If>
 <kl:Module name='DESIGNATION' />
 <jsp:include page='/MasterPageTopSection.jsp' />
 <script src='/styletwo/js/ConfirmDeleteDesignation.js'></script>

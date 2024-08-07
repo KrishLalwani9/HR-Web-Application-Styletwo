@@ -1,4 +1,7 @@
 <%@taglib uri='/WEB-INF/mytags/kltags.tld' prefix='kl' %>
+<kl:If condition='${username==null}'>
+<jsp:forward page='/LoginForm.jsp' />
+</kl:If>
 <!DOCTYPE HTML>
 <html lang='en'>
 <head>
@@ -11,7 +14,12 @@
 <div class='main-container'>
 <!-- header starts here -->
 <div class='header'>
-<a href='/styletwo/index.jsp'><image src='/styletwo/images/logo.png' class='logo'></a><div class='brand-name'>Krish Lalwani</div>
+<a href='/styletwo/index.jsp'><img src='/styletwo/images/logo.png' class='logo' /></a>
+<div class='brand-name'>Krish Lalwani</div>
+<div class='username'>
+<img src='/styletwo/images/usernameicon.png' /><b>${username}</b>&nbsp;
+<a href='/styletwo/logout'>Logout</a>
+</div>
 </div> <!-- header ends here -->
 <!-- content-section starts here -->
 <div class='content-panel'>
