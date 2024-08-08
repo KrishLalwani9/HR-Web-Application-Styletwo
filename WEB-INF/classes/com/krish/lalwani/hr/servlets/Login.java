@@ -10,13 +10,17 @@ public void doPost(HttpServletRequest request,HttpServletResponse response)
 try
 {
 AdministratorBean administratorBean=(AdministratorBean)request.getAttribute("administratorBean");
+if(administratorBean==null)
+{
+RequestDispatcher requestDispatcher=request.getRequestDispatcher("/LoginForm.jsp");
+requestDispatcher.forward(request,response);
+}
 String username=administratorBean.getUsername();
 String password=administratorBean.getPassword(); // comes from user or form qs
-AdministratorDTO administrator=new AdministratorDTO();
 AdministratorDAO administratorDAO=new AdministratorDAO();
 try
 {
-administrator=administratorDAO.getByUsername(username);
+AdministratorDTO administrator=administratorDAO.getByUsername(username);
 if(password.equals(administrator.getPassword())==false) throw new DAOException("Invalid Password : "+password);
 HttpSession session=request.getSession();
 session.setAttribute("username",username);

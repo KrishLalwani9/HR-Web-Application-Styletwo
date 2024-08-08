@@ -16,7 +16,7 @@ if(!resultSet.next())
 resultSet.close();
 preparedStatement.close();
 connection.close();
-throw new DAOException("Invalid username : "+username);
+throw new DAOException("Invalid Username : "+username);
 }
 AdministratorDTO administrator=new AdministratorDTO();
 administrator.setUsername(resultSet.getString("uname").trim());

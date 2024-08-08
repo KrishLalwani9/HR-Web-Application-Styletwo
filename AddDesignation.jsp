@@ -1,7 +1,7 @@
 <%@taglib uri='/WEB-INF/mytags/kltags.tld' prefix='kl' %>
-<kl:If condition='${username==null}'>
+<kl:Guard>
 <jsp:forward page='/LoginForm.jsp' />
-</kl:If>
+</kl:Guard>
 <kl:FormResubmitted>
 <kl:Module name='Home' />
 <jsp:forward page='/notifyFormResubmission' />

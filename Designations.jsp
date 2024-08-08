@@ -1,7 +1,4 @@
 <%@taglib uri='/WEB-INF/mytags/kltags.tld' prefix='kl' %>
-<kl:If condition='${username==null}'>
-<jsp:forward page='/LoginForm.jsp' />
-</kl:If>
 <kl:Module name='DESIGNATION' />
 <jsp:include page='/MasterPageTopSection.jsp' />
 <script src='/styletwo/js/ConfirmDeleteDesignation.js'></script>
@@ -21,14 +18,14 @@
 </tr>
 </thead>
 <tbody>
-<kl:Designations>
+<kl:EntityList populatorClass='com.krish.lalwani.hr.bl.DesignationBL' populatorMethod='getAll' name='dBean'>
 <tr>
 <td>${serialNumber}</td>
-<td>${designationBean.title}</td>
-<td style='text-align:center'> <a href='/styletwo/editDesignation?code=${designationBean.code}'>Edit</a> </td>
-<td style='text-align:center'> <a href='/styletwo/confirmDeleteDesignation?code=${designationBean.code}'>Delete</a> </td>
+<td>${dBean.title}</td>
+<td style='text-align:center'> <a href='/styletwo/editDesignation?code=${dBean.code}'>Edit</a> </td>
+<td style='text-align:center'> <a href='/styletwo/confirmDeleteDesignation?code=${dBean.code}'>Delete</a> </td>
 </tr>
-</kl:Designations>
+</kl:EntityList>
 </tbody>
 </table>
 <form id='cancelDeletionForm' action='/styletwo/Designations.jsp'>

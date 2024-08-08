@@ -83,5 +83,40 @@
     </description>
      </tag>
 
+      <tag>
+    <name>Guard</name>
+    <tag-class>com.krish.lalwani.hr.tags.GuardTagHandler</tag-class>
+    <description>
+	To check back door entry
+    </description>
+     </tag>
+
+     <tag>
+    <name>EntityList</name>
+    <tag-class>com.krish.lalwani.hr.tags.EntityListTagHandler</tag-class>
+    <description>
+	To check back door entry
+    </description>
+
+    <attribute>
+      <name>name</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>		
+    </attribute>
+
+    <attribute>
+      <name>populatorClass</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>		
+    </attribute>    
+
+    <attribute>
+      <name>populatorMethod</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>		
+    </attribute>
+
+     </tag>
+
 
 </taglib>
