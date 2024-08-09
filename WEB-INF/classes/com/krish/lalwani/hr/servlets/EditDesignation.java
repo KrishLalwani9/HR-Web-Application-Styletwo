@@ -9,6 +9,14 @@ public void doPost(HttpServletRequest request,HttpServletResponse response)
 {
 try
 {
+HttpSession session=request.getSession();
+String username=(String)session.getAttribute("username");
+if(username==null)
+{
+RequestDispatcher requestDispatcher=request.getRequestDispatcher("/LoginForm.jsp");
+requestDispatcher.forward(request,response);
+return;
+}
 int code=Integer.parseInt(request.getParameter("code"));
 System.out.println(code);
 DesignationDAO designationDAO=new DesignationDAO();

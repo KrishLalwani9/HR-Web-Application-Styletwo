@@ -1,14 +1,12 @@
 <%@taglib uri='/WEB-INF/mytags/kltags.tld' prefix='kl' %>
 <kl:Module name='DESIGNATION' />
 <jsp:useBean id='designationBean' scope='request' class='com.krish.lalwani.hr.beans.DesignationBean' />
-<jsp:useBean id='errorBean' scope='request' class='com.krish.lalwani.hr.beans.ErrorBean' /> 
 <jsp:include page='/MasterPageTopSection.jsp' />
 <script src='/styletwo/js/ConfirmDeleteDesignation.js'></script>
 <h2>Designation (Delete Module)</h2>
-<span class='error'><jsp:getProperty name='errorBean' property='error' /></span> <!-- Or we can use regular expression as ${errorBean.error} -->
 <form method='post' action='/styletwo/DeleteDesignation.jsp' onsubmit='return validateForm(this)'>
 Designation :&nbsp;&nbsp;
-<kl:FormId />
+<kl:FormId /> 
 <input type='hidden' id='code' name='code' value='${designationBean.code}'>
 <b>${designationBean.title}</b><br><br> <!-- We also can write <%=designationBean.getTitle()%> -->
 Are you sure, you want to delete ?

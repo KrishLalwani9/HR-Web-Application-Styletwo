@@ -1,7 +1,9 @@
 <%@taglib uri='/WEB-INF/mytags/kltags.tld' prefix='kl' %>
 <kl:Module name='DESIGNATION' />
+<jsp:useBean id='errorBean' scope='request' class='com.krish.lalwani.hr.beans.ErrorBean' /> 
 <jsp:include page='/MasterPageTopSection.jsp' />
 <script src='/styletwo/js/ConfirmDeleteDesignation.js'></script>
+<span class='error'><jsp:getProperty name='errorBean' property='error' /></span> <!-- Or we can use regular expression as ${errorBean.error} -->
 <h2>Designations</h2>
 <table border='1'>
 <thead>

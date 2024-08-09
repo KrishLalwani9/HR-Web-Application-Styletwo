@@ -9,6 +9,14 @@ public void doPost(HttpServletRequest request,HttpServletResponse response)
 {
 try
 {
+HttpSession session=request.getSession();
+String username=(String)session.getAttribute("username");
+if(username==null)
+{
+RequestDispatcher requestDispatcher=request.getRequestDispatcher("/LoginForm.jsp");
+requestDispatcher.forward(request,response);
+return;
+}
 DesignationBean designationBean;
 designationBean=(DesignationBean)request.getAttribute("designationBean");
 String title=designationBean.getTitle();
