@@ -10,7 +10,7 @@ public String designation;
 public String dateOfBirth;
 public String gender;
 public boolean isIndian;
-public BigDecimal basicSalary;
+public String basicSalary;
 public String panNumber;
 public String aadharCardNumber;
 public EmployeeBean()
@@ -74,6 +74,14 @@ public java.lang.String getGender()
 {
 return this.gender;
 }
+public boolean isMale()
+{
+return this.gender.equals("M");
+}
+public boolean isFemale()
+{
+return this.gender.equals("F");
+}
 public void setIsIndian(boolean isIndian)
 {
 this.isIndian=isIndian;
@@ -82,11 +90,11 @@ public boolean getIsIndian()
 {
 return this.isIndian;
 }
-public void setBasicSalary(java.math.BigDecimal basicSalary)
+public void setBasicSalary(String basicSalary)
 {
 this.basicSalary=basicSalary;
 }
-public java.math.BigDecimal getBasicSalary()
+public String getBasicSalary()
 {
 return this.basicSalary;
 }
