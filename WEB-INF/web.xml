@@ -102,6 +102,16 @@
 <url-pattern>/logout</url-pattern>
 </servlet-mapping>
 
+<servlet>
+<servlet-name>EmployeeJS</servlet-name>
+<servlet-class>com.krish.lalwani.hr.servlets.EmployeeJS</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>EmployeeJS</servlet-name>
+<url-pattern>/js/Employees.js</url-pattern>
+</servlet-mapping>
+
+
   <welcome-file-list>  
    <welcome-file>LoginForm.jsp</welcome-file>  
   </welcome-file-list>  
