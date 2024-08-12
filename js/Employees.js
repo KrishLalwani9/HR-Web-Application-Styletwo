@@ -15,8 +15,6 @@ var selectedRow=null;
 var i=0;
 function selectEmployee(row,employeeId)
 {
-alert(row);
-alert(employeeId);
 if(row==selectedRow) return;
 if(selectedRow!=null)
 {
